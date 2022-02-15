@@ -1,0 +1,15 @@
+<resources>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="medium_margin_8dp">8dp</dimen>
+    <dimen name="small_margin_4dp">4dp</dimen>
+
+    //Text size
+    <dimen name="textSize_22sp">22sp</dimen>
+    <dimen name="textSize_18sp">18sp</dimen>
+    <dimen name="textSize_16sp">16sp</dimen>
+    <dimen name="textSize_14sp">14sp</dimen>
+
+    //layout margins
+    <dimen name="margin_56dp">56dp</dimen>
+    <dimen name="image_width_60">60dp</dimen>
+</resources>

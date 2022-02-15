@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.details.EmployeeDetailsFragment">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_56dp"
+                    android:gravity="center"
+                    android:text="@string/emp_details_page_title"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textSize_18sp" />
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/medium_margin_8dp"
+            android:layout_marginEnd="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/profileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="@dimen/textSize_22sp"
+            app:layout_constraintEnd_toEndOf="@+id/profileImage"
+            app:layout_constraintStart_toStartOf="@+id/profileImage"
+            app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+        <TextView
+            android:id="@+id/textViewUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/profileName"
+            app:layout_constraintStart_toStartOf="@+id/profileName"
+            app:layout_constraintTop_toBottomOf="@+id/profileName" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewUsername"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="@dimen/medium_margin_8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/medium_margin_8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/medium_margin_8dp"
+                android:padding="@dimen/small_margin_4dp"
+                android:src="@drawable/ic_email" />
+
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textSize="@dimen/textSize_16sp" />
+
+        </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardEmail"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="@dimen/medium_margin_8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:orientation="horizontal"
+            android:padding="@dimen/medium_margin_8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginEnd="@dimen/medium_margin_8dp"
+                android:padding="@dimen/small_margin_4dp"
+                android:src="@drawable/ic_address" />
+
+            <TextView
+                android:id="@+id/textViewAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/medium_margin_8dp"
+                android:minLines="3"
+                android:textSize="@dimen/textSize_14sp" />
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardAddress"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="@dimen/medium_margin_8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/medium_margin_8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/medium_margin_8dp"
+                android:padding="@dimen/small_margin_4dp"
+                android:src="@drawable/ic_phone" />
+
+            <TextView
+                android:id="@+id/textViewPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/medium_margin_8dp"
+                android:textAllCaps="false"
+                android:textSize="@dimen/textSize_16sp" />
+        </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardWebsite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardPhone"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="@dimen/medium_margin_8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/medium_margin_8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/medium_margin_8dp"
+                android:padding="@dimen/small_margin_4dp"
+                android:src="@drawable/ic_baseline_web_24" />
+
+            <TextView
+                android:id="@+id/textViewWebSite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/medium_margin_8dp"
+                android:textAllCaps="false"
+                android:textSize="@dimen/default_margin" />
+        </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardCompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardWebsite"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="@dimen/medium_margin_8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:orientation="horizontal"
+            android:padding="@dimen/medium_margin_8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginEnd="@dimen/medium_margin_8dp"
+                android:padding="@dimen/small_margin_4dp"
+                android:src="@drawable/ic_business" />
+
+            <TextView
+                android:id="@+id/companyName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/medium_margin_8dp"
+                android:minLines="3"
+                android:textSize="@dimen/textSize_16sp" />
+
+        </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
